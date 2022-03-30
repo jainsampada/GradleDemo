@@ -22,13 +22,14 @@ public class LoginTest extends TestBase{
 	public void Lauch_Browser()
 	{
 	//	System.out.println("Hello");
-		launchDriver();
+		LaunchDriver();
 		obj=new BuyProduct();
 	}
 	
 	@Test
 	public void checktitle()
 	{
+		System.out.println("Hello");
 		currenturl=obj.VerifyTitle();
 		Assert.assertEquals(currenturl,"https://www.amazon.in/");
 		
@@ -36,12 +37,12 @@ public class LoginTest extends TestBase{
 	@Test
 	public void buy()
 	{
-		obj.purchase();
+		obj.Purchase();
 	}
 	@AfterSuite
 	public void closebrowser()
 	{
-		obj.Close_Browser();
+		obj.CloseBrowser();
 	}
 }
 

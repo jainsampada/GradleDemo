@@ -20,9 +20,15 @@ public TestBase()
 {
 	try
 	{
+		//Setting path of properties file
 		path=System.getProperty("user.dir")+"//src//test//java//com//configuration//configuration.properties";
+		
+		//Read data from properties file
 		FileInputStream ip=new FileInputStream(path);
+		
+		//Initializing the properties file 
 		prop=new Properties();
+		
 		prop.load(ip);
 		
 	}
@@ -31,10 +37,15 @@ public TestBase()
 		e.printStackTrace();
 	}
 }
-public static void launchDriver()
+public static void LaunchDriver()
 {
+	//Setting up Chrome Driver
 	WebDriverManager.chromedriver().setup();
+	
+	//Initializing Chrome Driver
 	driver=new ChromeDriver();
+	
+	//Setting Implicit wait for 5 seconds
 	driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 	driver.manage().deleteAllCookies();
 	driver.manage().window().maximize();
