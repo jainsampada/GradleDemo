@@ -29,6 +29,7 @@ public class LoginTest extends TestBase{
 	@Test
 	public void checktitle()
 	{
+		System.out.println("Hello");
 		currenturl=obj.VerifyTitle();
 		Assert.assertEquals(currenturl,"https://www.amazon.in/");
 		
