@@ -30,7 +30,7 @@ public class BuyProduct extends TestBase {
 		return driver.getCurrentUrl();
 	}
 
-	public void purchase() {
+	public void Purchase() {
 
 		category.click();
 		product.click();
@@ -39,7 +39,7 @@ public class BuyProduct extends TestBase {
 
 	}
 
-	public void Close_Browser() {
+	public void CloseBrowser() {
 		driver.quit();
 	}
 }
